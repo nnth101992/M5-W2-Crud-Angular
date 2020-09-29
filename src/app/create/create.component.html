@@ -1,0 +1,11 @@
+<h2>Create product</h2>
+<br>
+<a [routerLink]="''">List</a>
+<br>
+<br>
+<form>
+  <input type="text" name="name" [(ngModel)]="product.name">
+  <input type="text" name="description" [(ngModel)]="product.description">
+  <input type="submit" [value]="'Create'" (click)="create()">
+</form>
+

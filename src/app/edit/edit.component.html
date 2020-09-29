@@ -1,0 +1,9 @@
+<h2>Edit product with id: {{product.id}}</h2>
+<a [routerLink]="''">List</a>
+<br>
+<br>
+<form>
+  <input type="text" name="name" [(ngModel)]="product.name">
+  <input type="text" name="description" [(ngModel)]="product.description">
+  <input type="submit" [value]="'Submit'" (click)="updateProduct()">
+</form>
