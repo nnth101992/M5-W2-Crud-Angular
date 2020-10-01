@@ -21,7 +21,7 @@ export class DeleteComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       const id = +paramMap.get('id');
-      this.product = this.productService.getProductById(id);
+      // this.product = this.productService.getProductById(id);
     });
   }
 

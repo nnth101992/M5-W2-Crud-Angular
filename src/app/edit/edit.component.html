@@ -2,8 +2,9 @@
 <a [routerLink]="''">List</a>
 <br>
 <br>
-<form>
-  <input type="text" name="name" [(ngModel)]="product.name">
-  <input type="text" name="description" [(ngModel)]="product.description">
-  <input type="submit" [value]="'Submit'" (click)="updateProduct()">
+<form class="form-group">
+  <input type="text" name="name" [ngModel]="product.name">
+  <input type="text" name="id" [ngModel]="product.id" hidden>
+  <input type="text" name="description" [ngModel]="product.description">
+  <input class="btn badge-success" type="submit" value="Submit" (click)="updateProduct()">
 </form>

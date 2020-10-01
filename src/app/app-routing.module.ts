@@ -7,7 +7,7 @@ import {DeleteComponent} from './delete/delete.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'danhsach',
     component: ListComponent
   },
   {

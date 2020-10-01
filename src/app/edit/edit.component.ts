@@ -20,13 +20,22 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscription = this.activeRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      const id = +paramMap.get('id');
-      this.product = this.productService.getProductById(id);
+      var id = +paramMap.get('id');
+
+      this.getPBI(id);
+      this.product.id = id;
+      // this.productService.getProductById(id).subscribe(pr => this.product = pr);
     });
   }
 
+  getPBI(id:number){
+    this.productService.getProductById(id).subscribe(p => this.product = p);
+  }
+
   updateProduct(): void {
-    this.productService.editProduct(this.product);
+    this.productService.editProduct(this.product, this.product.id).subscribe(()=>{
+      this.router.navigate(['danhsach']);
+    });
   }
 
 
